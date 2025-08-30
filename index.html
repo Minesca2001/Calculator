@@ -1,0 +1,54 @@
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Calculadoras Matemáticas</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Colección de calculadoras matemáticas limpias y sencillas." />
+  <script type="importmap">
+  {
+    "imports": {
+      "mathjs": "https://cdn.jsdelivr.net/npm/mathjs@11.8.0/lib/browser/math.js"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar">
+      <h1>Calculadoras</h1>
+      <nav>
+        <ul id="calc-list">
+          <li data-id="scientific" class="active">1. Científica</li>
+          <li data-id="fractions">2. Fracciones</li>
+          <li data-id="factor">3. Factorización</li>
+          <li data-id="primes">4. Números primos</li>
+          <li data-id="mcm">5. MCM</li>
+          <li data-id="mcd">6. MCD</li>
+          <li data-id="powers">7. Potencias & Raíces</li>
+          <li data-id="logs">8. Logaritmos</li>
+          <li data-id="quadratic">9. Ecuación cuadrática</li>
+          <li data-id="linear">10. Ecuación lineal</li>
+          <li data-id="series">11. Series (aritm./geom.)</li>
+        </ul>
+      </nav>
+      <footer>Diseño limpio · Fácil uso</footer>
+    </aside>
+
+    <main class="main">
+      <header>
+        <h2 id="calc-title">Calculadora Científica</h2>
+        <div class="help" id="help-text">Usa expresiones como: 2+3*sqrt(4), sin(pi/2), log(100)</div>
+      </header>
+
+      <section id="panel" class="panel">
+        <!-- content injected by JS -->
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+:root{
+  --bg:#fff;
+  --muted:#666;
+  --accent:#111;
+  --card:#f7f7f7;
+  --radius:10px;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box}
+html,body,#app{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--accent);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+#app{display:flex;gap:24px;padding:24px}
+.sidebar{
+  width:240px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.sidebar h1{margin:0;font-size:18px}
+.sidebar nav{flex:1;background:transparent}
+#calc-list{list-style:none;padding:8px;margin:0;border-radius:8px}
+#calc-list li{
+  padding:10px 12px;border-radius:8px;margin:6px 0;cursor:pointer;color:var(--muted);
+}
+#calc-list li.active{background:#eef0f2;color:var(--accent);font-weight:600}
+footer{font-size:12px;color:var(--muted)}
+
+.main{flex:1;display:flex;flex-direction:column;gap:16px}
+header{display:flex;justify-content:space-between;align-items:center}
+header h2{margin:0;font-size:20px}
+.help{font-size:13px;color:var(--muted)}
+.panel{
+  background:var(--card);
+  padding:18px;border-radius:var(--radius);
+  box-shadow:0 1px 0 rgba(0,0,0,0.03);
+  min-height:420px;
+}
+
+/* common form styles */
+.form-row{display:flex;gap:8px;align-items:center;margin:10px 0;flex-wrap:wrap}
+.input, .select {padding:10px;border:1px solid #e1e4e8;border-radius:8px;font-size:14px}
+.button{background:#111;color:#fff;border:none;padding:8px 12px;border-radius:8px;cursor:pointer}
+.small{padding:6px 8px;font-size:13px}
+.result{margin-top:12px;padding:12px;background:white;border-radius:8px;border:1px solid #ececec}
+.code{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;font-size:13px;background:#fff;padding:8px;border-radius:6px;border:1px dashed #e9e9e9}
+.note{font-size:13px;color:var(--muted)}
+
+.input-label {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 500;
+  white-space: nowrap; /* Prevents label from wrapping if space is tight */
+  /* margin-right: 4px; */ /* Small space after label if it's inline with input */
+}
+@media (max-width:880px){
+  #app{flex-direction:column;padding:12px}
+  .sidebar{width:100%;display:flex;flex-direction:row;overflow:auto}
+  #calc-list{display:flex;gap:6px}
+  #calc-list li{white-space:nowrap}
+}
