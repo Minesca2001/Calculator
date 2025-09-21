@@ -1,5 +1,3 @@
-import * as math from "mathjs";
-
 // Simple utility helpers
 const el = sel => document.querySelector(sel);
 const create = (tag, opts={}) => Object.assign(document.createElement(tag), opts);
